@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.sources-form {
+  margin-bottom: 20px;
+}
+header{
+  margin-bottom: 20px;
+}
+
+
+.the-form {
+  border: 1px dotted green;
+  padding: 10px;
+}
+
+.form-field{
+  margin-bottom: 5px;
+  display: flex;
+  gap: 10px;
+}

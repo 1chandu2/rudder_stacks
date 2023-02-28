@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "5323d840-8ea6-41e1-ba63-9c1ccdddc63b",
+		"name": "rudderstacks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10047537"
+	},
+	"item": [
+		{
+			"name": "post template",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\": \"source1\",\n\t\"fields\": {\n\t\t\"apiKey\": {\n\t\t\t\"type\": \"input\",\n            \"label\": \"API key\",\n            \"regexErrorMessage\": \"Invalid api key\",\n            \"placeholder\": \"e.g: 1234asdf\",\n            \"regex\": \"[a-z0-9]\",\n\t\t\t\"required\": true\n\t\t},\n\t\t\"useHTTP\": {\n\t\t\t\"type\": \"checkbox\",\n\t\t\t\"required\": false,\n            \"label\": \"Enable HTTP\"\n\t\t},\n\t\t\"category\": {\n\t\t\t\"type\": \"singleSelect\",\n            \"label\": \"Select category\",\n\t\t\t\"required\": true,\n            \"options\": [\n\t\t\t\t{\"label\": \"Android\", \"value\": \"android\"},\n\t\t\t\t{\"label\": \"IOS\", \"value\": \"ios\"}\n\t\t\t]\n\t\t}\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/rudderstacks/v1/templates",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rudderstacks",
+						"v1",
+						"templates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all templates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rudderstacks/v1/templates",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rudderstacks",
+						"v1",
+						"templates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get particular template using source type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rudderstacks/v1/templates/source1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rudderstacks",
+						"v1",
+						"templates",
+						"source1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all sources",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rudderstacks/v1/sources",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rudderstacks",
+						"v1",
+						"sources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post configuration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n    \"apiKey\" : \"a\",\n    \"useHTTP\" : \"yes\",\n    \"category\" : \"android\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/rudderstacks/v1/sourceConfigs/source1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rudderstacks",
+						"v1",
+						"sourceConfigs",
+						"source1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get configurations of source",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rudderstacks/v1/sourceConfigs/source1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rudderstacks",
+						"v1",
+						"sourceConfigs",
+						"source1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
